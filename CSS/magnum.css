@@ -17,22 +17,22 @@ h1 {
 
 /* background */
 body{
-	background-color: #0099CC;
+	background-color: #FFFFFF;
 }
 
 /* column */
 #content, #left, #right, #frame, #footer {
-	background: #66CCFF;
+	background: #FFFF99;
 	}
 	
 /* Front */
 #center, #center-right {
-	background: #FFF;
+	background: #FFFFFF;
 	}
 
 /* Spotlight */	
 #banner-right, #banner-left {
-	background-color: #003399;
+	background-color: #FFFF99;
 }	
 
 /***************************************
