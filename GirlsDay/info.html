@@ -1,4 +1,13 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+﻿<?php
+include '../GirlsDay/connect.php';
+if(!isset($_SESSION['session_user'])){
+	header('Location: index2.html');
+	else
+	header('Location: index.html');
+}
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
 		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv" lang="sv">    
     <head>
@@ -14,8 +23,8 @@
             </div>
             <div id="left">
 					<div class="dokument-item">
-						<br>
-												<ul>
+					<br>
+						<ul>
 <li><a href="info.html"> Members </a></li>
 <br>
 <li><a href="music.html"> Songs/Albums </a></li>
@@ -26,6 +35,9 @@
 <br>
 <li><a href="pictures.html"> Pictures </a></li>
 </ul>
+<center><br><br><form action="loggaut.php" method="post">
+<input type="submit" value="Logga ut">
+</form></center>
 					</div>
             </div>
             <div id="center">
@@ -33,18 +45,10 @@
 							<div class="meny">
 				<br>
                 <div id="info">
-				<h1 class="dokument-item-header"> Registrera:	</h1>
+				<h1 class="dokument-item-header"> Girls Day	</h1>
 				
 </div>
-				<p class="info">
-
-<form action="input.php" method="post">
-Välj ett användarnamn:<br> <input type="text" name="myUser"> <br>
-Välj ett lösenord:<br><input type="password" name="myPassword"><br>
-<input type="submit" value="Registrera">
-</form>
-
-</p>
+				<p class="info">Inledning på webbsidan.</p>
 </div>
 </div>
             <div id="right">

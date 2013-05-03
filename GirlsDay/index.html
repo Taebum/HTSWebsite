@@ -1,6 +1,19 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+﻿<?php
+include '../GirlsDay/connect.php';
+if(!isset($_SESSION['session_user'])){
+	header('Location: index2.html');
+}
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
 		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv" lang="sv">    
+<?php
+include '../GirlsDay/connect.php';
+if(isset($_SESSION['session_user'])){
+	header('Location: index2.html');
+}
+?>
+		<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv" lang="sv">    
     <head>
         <meta http-equiv="Content-Type" content="text/html charset=utf-8" />
         <link rel="stylesheet" title="Lena" type="text/css" href="../CSS/Lena.css" />
@@ -15,7 +28,7 @@
             <div id="left">
 					<div class="dokument-item">
 						<br>
-												<ul>
+						<ul>
 <li><a href="info.html"> Members </a></li>
 <br>
 <li><a href="music.html"> Songs/Albums </a></li>
@@ -33,22 +46,23 @@
 							<div class="meny">
 				<br>
                 <div id="info">
-				<h1 class="dokument-item-header"> Registrera:	</h1>
+				<h1 class="dokument-item-header"> Var snäll och logga in först	</h1>
 				
 </div>
-				<p class="info">
-
-<form action="input.php" method="post">
-Välj ett användarnamn:<br> <input type="text" name="myUser"> <br>
-Välj ett lösenord:<br><input type="password" name="myPassword"><br>
-<input type="submit" value="Registrera">
-</form>
-
-</p>
+				<p class="info"></p>
 </div>
 </div>
             <div id="right">
-					<br><br><br><br><br><br><br><br><br><br><br><br>
+					<br><br>
+					<form action="login.php" method="post">
+Användarnamn:<br> <input type="text" name="myUser"> <br>
+Lösenord:<br><input type="password" name="myPassword"><br>
+<input type="submit" value="Logga in"><br><br>
+</form>
+Har du inget konto?<br>
+<form action="Registrera.php" method="post">
+<input type="submit" value="Registrera dig">
+</form>
             </div>
 
 			<div id="footer">

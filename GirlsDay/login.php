@@ -10,10 +10,10 @@
          
 		 if (mysql_numrows($result) == 1) {
 		      $_SESSION['session_user']=$_POST[myUser];
-			  header('Location: inloggad.php');
+			  header('Location: index2.html');
 		 }
 		 else {
-			  header('Location: login.html');
+			  header('Location: index.html');
 		 }
 		
 ?>
