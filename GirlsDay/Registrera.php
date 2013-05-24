@@ -15,17 +15,7 @@
             <div id="left">
 					<div class="dokument-item">
 						<br>
-												<ul>
-<li><a href="info.html"> Members </a></li>
-<br>
-<li><a href="music.html"> Songs/Albums </a></li>
-<br>
-<li><a href="awards.html"> Awards </a></li>
-<br>
-<li><a href="biography.html"> Biography </a></li>
-<br>
-<li><a href="pictures.html"> Pictures </a></li>
-</ul>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 					</div>
             </div>
             <div id="center">

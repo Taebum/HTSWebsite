@@ -1,7 +1,10 @@
 <?php
 		include '../GirlsDay/connect.php';
+		
+				$Duck=$_POST[myPassword];
+		$Quack=md5($Duck);
 
-             $query = "INSERT INTO konto (name, password) VALUES ('$_POST[myUser]', '$_POST[myPassword]')";
+             $query = "INSERT INTO konto (name, password) VALUES ('$_POST[myUser]', '$Quack')";
 
              $result = mysql_query($query);
              if ($result === false) {

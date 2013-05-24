@@ -1,7 +1,7 @@
 ﻿<?php
 session_start();
 if(!isset($_SESSION['session_user'])){
-	header('Location: index.html');
+	header('Location: login.php');
 }
 ?>
 
@@ -32,6 +32,8 @@ if(!isset($_SESSION['session_user'])){
 <li><a href="biography.html"> Biography </a></li>
 <br>
 <li><a href="pictures.html"> Pictures </a></li>
+<br>
+<li><a href="sok.php"> Sök användarnamn </a></li>
 </ul>
 <center><br><br><form action="logout.php" method="post">
 <input type="submit" value="Logga ut">

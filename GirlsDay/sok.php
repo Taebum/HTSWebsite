@@ -1,7 +1,8 @@
-﻿<?php
+<?php
+include '../GirlsDay/connect.php';
 session_start();
 if(!isset($_SESSION['session_user'])){
-	header('Location: index.html');
+	header('Location: login.php');
 }
 ?>
 
@@ -22,7 +23,7 @@ if(!isset($_SESSION['session_user'])){
             <div id="left">
 					<div class="dokument-item">
 					<br>
-								<ul>
+						<ul>
 <li><a href="info.html"> Members </a></li>
 <br>
 <li><a href="music.html"> Songs/Albums </a></li>
@@ -45,10 +46,48 @@ if(!isset($_SESSION['session_user'])){
 							<div class="meny">
 				<br>
                 <div id="info">
-				<h1 class="dokument-item-header"> Girls Day	</h1>
+				<h1 class="dokument-item-header"> <p id = "infoSok">Sök på användarnamn! <br />	</h1>
 				
 </div>
-				<p class="info">Inledning på webbsidan.</p>
+								<h5 class="plot"><form action="sok.php" method="post" >
+
+<input name="soktAnv" id="soktAnv" type="text" value="" /> <input id="btnSok" type="submit" value="S&ouml;k" />
+
+</p>
+
+</form>
+<?php
+if (isset($_POST['soktAnv'])) {
+$soktVar = $_POST['soktAnv'];
+
+
+// mysql injections???????
+$soktVar = stripslashes($soktVar);
+$soktVar = mysql_real_escape_string($soktVar);
+
+
+$query = "SELECT name FROM konto WHERE name= '$soktVar' OR name LIKE '%$soktVar%'";
+//echo '<em> ' . $query . ' </em>';
+$result = mysql_query($query);
+if ($result === false) {
+echo "<strong> Error when you asked a question to your databas. " . mysql_errno . " : <br />" . mysql_error . "</strong>";
+}
+$num=mysql_numrows($result);
+if($num==0) {
+echo '<p id="txtSok">Finns ingen sån användare <br /> S&ouml;k p&aring; en annan anv&auml;ndare.</p>';
+}
+else {
+
+for ($i=0;$i<$num;$i++) {
+$temp = mysql_fetch_array($result);
+
+echo $temp['name'] . "<br />";
+}
+
+}
+}
+?>
+<br /><br />
 </div>
 </div>
             <div id="right">

@@ -1,13 +1,13 @@
 ﻿<?php
-if(isset($_SESSION['session_user'])){
-	header('Location: index2.html');
+session_start();
+if(!isset($_SESSION['session_user'])){
+	header('Location: login.php');
 }
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
 		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-		<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv" lang="sv">    
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv" lang="sv">    
     <head>
         <meta http-equiv="Content-Type" content="text/html charset=utf-8" />
         <link rel="stylesheet" title="Lena" type="text/css" href="../CSS/Lena.css" />
@@ -20,20 +20,23 @@ if(isset($_SESSION['session_user'])){
                <div id="banner-center" ><img src="banner.jpg" alt="banner" width="994" height="518"> </div>
             </div>
             <div id="left">
+					<div class="dokument-item">
+					<br>
+					<br><br><br><br><br><br><br><br><br><br><br><br>
+					</div>
             </div>
             <div id="center">
 
 							<div class="meny">
 				<br>
                 <div id="info">
-				<h1 class="dokument-item-header"> Var snäll och logga in först	</h1>
+								<h1 class="dokument-item-header"> Var snäll och logga in först	</h1>
 				
 </div>
-				<p class="info"></p>
 </div>
 </div>
             <div id="right">
-					<br><br>
+										<br><br>
 					<form action="login.php" method="post">
 Användarnamn:<br> <input type="text" name="myUser"> <br>
 Lösenord:<br><input type="password" name="myPassword"><br>
