@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+﻿<?php
+   mysql_close($con);
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
 		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv" lang="sv">    
     <head>
@@ -16,15 +20,15 @@
 					<div class="dokument-item">
 						<br>
 						<ul>
-<li><a href="info.php"> Members </a></li>
+<li><a href="info.html"> Members </a></li>
 <br>
-<li><a href="music.php"> Songs/Albums </a></li>
+<li><a href="music.html"> Songs/Albums </a></li>
 <br>
-<li><a href="awards.php"> Awards </a></li>
+<li><a href="awards.html"> Awards </a></li>
 <br>
-<li><a href="biography.php"> Biography </a></li>
+<li><a href="biography.html"> Biography </a></li>
 <br>
-<li><a href="pictures.php"> Pictures </a></li>
+<li><a href="pictures.html"> Pictures </a></li>
 </ul>
 					</div>
             </div>
@@ -41,7 +45,7 @@
 </div>
             <div id="right">
 					<br><br><u><b>Logga in:</b></u><br><br>
-				<form action="logIn.php" method="post">
+				<form action="login.php" method="post">
 Användarnamn:<br> <input type="text" name="myUser"> <br>
 Lösenord:<br><input type="password" name="myPassword"><br>
 <input type="submit" value="Logga in">

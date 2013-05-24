@@ -1,8 +1,6 @@
 ﻿<?php
-include '../GirlsDay/connect.php';
+session_start();
 if(!isset($_SESSION['session_user'])){
-	header('Location: index2.html');
-	else
 	header('Location: index.html');
 }
 ?>
@@ -35,7 +33,7 @@ if(!isset($_SESSION['session_user'])){
 <br>
 <li><a href="pictures.html"> Pictures </a></li>
 </ul>
-<center><br><br><form action="loggaut.php" method="post">
+<center><br><br><form action="logout.php" method="post">
 <input type="submit" value="Logga ut">
 </form></center>
 					</div>
